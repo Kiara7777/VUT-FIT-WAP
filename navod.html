@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Navod pro DOM Inspektora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>Dokumentace pro WAP projekt: DOM inspektor</h1>
+            <p>DOM inspektor slouží pro zobrazování DOM stromu dané html stránky. Zobrazuji se pouze uzly typu Document, Element a Text.
+                Dále umožňuje při kliknutí na element ve stránce barevně vyznačit jeho odpovídající ekvivalent ve seznamu uzlu. Podobně
+                při kliknutí do stromu se vyznačí element ve html stránce. Projekt také umožňuje měnit elementům atributy class a id.
+            </p>
+            <h2>Použití v dokumentu</h2>
+            <p>
+                Pro správnou funkčnost inspektoru se musí splnit 2 podmínky: <br/><br/>
+                
+                1. Do hlavičky html dokumentu se musí vložit odkaz na script s inpektorem: <br/>
+                
+                <code> &lt;script type="text/javascript" src="domInspektor.js"&gt;&lt;/script&gt; </code> <br/><br/>
+                
+                2. Na konec body elementu se musí vložit část skriptu pro inicializaci inspektoru: <br/>
+                
+                <code> &lt;script&gt;createInspektor();&lt;/script&gt; </code>
+            </p>
+            <p>
+                Součástí je i css soubor - inspektor.css, který obsahuje definici stylu pro všechny prvky DOM inspektora.
+                Soubor je opatřen komentáří k jednotlím definicím.
+            </p>
+            
+            <h2>Použití</h2>
+            <p>
+                DOM strom se zobrazuje jako neočíslovaný seznam. Obsah textových uzlu se zobrazuje pouze jako řetězec Text. Při pohybu myší nad
+                tímto řetězcem se pak zobrazí Tooltip se skutečným obsahem textového uzlu.
+            </p>
+            <p>
+                Při kliknutí na element se jeho ekvivalentnímu prvku DOM Inspektoru nastaví třída <code>coloring</code>. Podobně i
+                při kliknutí na položku v seznamu DOM prvků.Třída <code>coloring</code> má nastaveno barvení pozadí. Při kliknutí 
+                na jiný prvek se třída odebere a tím se zruší zabarvení prvku. Funkce: <strong>elemIndexBody(node), elemIndexInspektor(node), 
+                setColor(newTarget)</strong>
+            </p>
+            
+             <p>
+                 Při dvojkliku na prvek v inspektoru se otevře zadávací "dialog", pomocí kterého lze měnit atributy class a id.
+                 Funkce: <strong>modalWindow()</strong> a vnitřní funkce v <strong>setEventDialog()</strong>. Pokud se klikne mimo dialog nebo na k
+            </p>
+                
+            
+            
+        </div>
+    </body>
+</html>

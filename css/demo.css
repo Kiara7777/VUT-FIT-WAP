@@ -1,0 +1,61 @@
+/*
+Projekt: DOM inspektor do predmetu WAP
+Autor: Sara Skutova, xskuto00@stud.fit.vutbr.cz
+Soubor: demo.css
+*/
+
+html,body  {
+    margin: 0;
+    height: 100%
+}
+
+header {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 30px;
+}
+
+footer{
+    background-color: #cccccc;
+    text-align: center;
+    padding: 30px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+.column {
+    float: left;
+    padding: 15px;  
+}
+
+.content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.menuBar {
+    width: 25%;
+}
+
+.main {
+    width: 75%;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 15px 30px 15px 30px;
+    margin-bottom: 10px;
+    
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}

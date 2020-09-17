@@ -1,0 +1,86 @@
+/*
+Projekt: DOM inspektor do predmetu WAP
+Autor: Sara Skutova, xskuto00@stud.fit.vutbr.cz
+Soubor: inspector.css
+*/
+
+/*Styl inspektora - je to jediny DIV panel
+jeho pozice - v pravem hornim roku
+styl pisma
+styl ramecku
+*/
+.inspektor {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 12px;
+    border: 3px solid #33b5e5; 
+}
+
+/*
+Slouzi jako barvic pozadi zvolenho prvku - jak ve html strance, tak i v inspektoru
+tahle trida se nastavuje prvkum, ktere se maji obarvit, pri kliknuti na jinaci prvek se trida zrusi
+*/
+.coloring {
+    /*
+    !important protoze nekdy melo pravidlo prilis malou prioritu a bylo prepsano jinym.
+    tohle pravidlo existuje jenom  na obarvovani prvku pri jejich vyberu, puvodni styl je pri kliknuti
+    na jiny prvek opet obnoven
+    */
+    background-color: rgba(255, 99, 71, 0.5) !important;
+}
+
+/*https://www.w3schools.com/howto/howto_css_modals.asp*/
+/*
+STYLY PRO POMOCNE ZADAVACI OKNO
+*/
+/*
+Styl pro pozadi - jakoby ztmaveni obrazovky
+display se meni, pri zobrazeni se meni na block, pri odkliknuti se zmeni na none
+prekryva cele okno a vystupuje nad vsemi prvky
+ma nacertnalou prusvitnou barvu
+*/
+.modalInspektor {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/*
+Styl dotazovaciho okna
+vnitrek skoro bily a s rameckem
+*/
+.modalContentInspektor {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%; 
+}
+
+/*
+Styl krizku - imitace tlacitka exit/ukoceni
+*/
+.modalCloseInspektor {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/*
+Graficka reakce krizku/tlacitka exit na mys 
+*/
+.modalCloseInspektor:hover,
+.modalCloseInspektor:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
